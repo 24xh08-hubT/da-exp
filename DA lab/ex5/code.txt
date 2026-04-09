@@ -5,19 +5,26 @@ import matplotlib.pyplot as plt
 
 # Load dataset
 df = pd.read_csv("play_tennis.csv")
+
+# Remove spaces
+df = df.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
+
 print("Dataset:\n", df)
 
-# Encode categorical columns
-for col in df.columns:
-    if df[col].dtype == 'object':
-        df[col] = LabelEncoder().fit_transform(df[col])
-
-# Split features and target
+# Encode ONLY input features
 X = df.iloc[:, :-1]
 y = df.iloc[:, -1]
 
+le = LabelEncoder()
+
+for col in X.columns:
+    X[col] = le.fit_transform(X[col])
+
+# Encode target separately
+y = le.fit_transform(y)
+
 # Train model
-model = DecisionTreeClassifier(criterion='entropy', random_state=0)
+model = DecisionTreeClassifier(criterion='entropy', random_state=42)
 model.fit(X, y)
 
 # Print rules
@@ -25,7 +32,7 @@ print("\nDecision Tree Rules:\n")
 print(export_text(model, feature_names=list(X.columns)))
 
 # Plot tree
-plt.figure(figsize=(12, 8))
-plot_tree(model, feature_names=X.columns, filled=True)
+plt.figure(figsize=(12,8))
+plot_tree(model, feature_names=X.columns, class_names=["No","Yes"], filled=True)
 plt.title("Decision Tree (ID3)")
 plt.show()
