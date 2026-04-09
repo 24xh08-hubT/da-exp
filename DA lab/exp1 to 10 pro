@@ -1,0 +1,251 @@
+EXPERIMENT 1 – FIND-S ALGORITHM
+
+Aim:
+To implement the Find-S algorithm to find the most specific hypothesis from the given training dataset.
+
+Libraries Used:
+pandas – used to read dataset from CSV file
+numpy – used for array operations
+
+Functionalities:
+Find-S algorithm identifies the most specific hypothesis that fits all positive examples.
+
+Procedure:
+
+Import required libraries
+Load dataset using pandas
+Separate attributes and target
+Initialize hypothesis with most specific values
+Compare with each training example
+Update hypothesis for positive examples
+Ignore negative examples
+Display final hypothesis
+
+
+EXPERIMENT 2 – CANDIDATE ELIMINATION
+
+Aim:
+To implement the Candidate Elimination algorithm to find all consistent hypotheses.
+
+Libraries Used:
+pandas – for dataset handling
+numpy – for array operations
+
+Functionalities:
+Maintains S (specific boundary) and G (general boundary) and eliminates inconsistent hypotheses.
+
+Procedure:
+
+Load dataset
+Initialize S and G
+For each training example:
+a. If positive, generalize S
+b. If negative, specialize G
+Remove inconsistent hypotheses
+Print final S and G
+
+
+EXPERIMENT 3 – APRIORI ALGORITHM
+
+Aim:
+To implement Apriori algorithm for association rule mining.
+
+Libraries Used:
+pandas – dataset handling
+efficient_apriori – for association rule mining
+
+Functionalities:
+Finds frequent itemsets and generates association rules.
+
+Procedure:
+
+Load dataset
+Convert dataset into transactions
+Apply Apriori algorithm
+Set minimum support and confidence
+Generate frequent itemsets
+Display rules
+
+
+EXPERIMENT 4 – REGRESSION
+
+Aim:
+To implement Linear Regression and Logistic Regression.
+
+Libraries Used:
+pandas – data handling
+sklearn – machine learning
+matplotlib – plotting
+
+Functionalities:
+Linear Regression predicts continuous values
+Logistic Regression predicts categorical values
+
+Procedure:
+
+Load dataset
+Split into X (features) and y (target)
+Split into training and testing sets
+Train model
+Predict output
+Calculate accuracy
+Plot graph
+
+
+EXPERIMENT 5 – DECISION TREE (ID3)
+
+Aim:
+To implement Decision Tree using ID3 algorithm.
+
+Libraries Used:
+pandas – dataset handling
+sklearn – machine learning
+matplotlib – visualization
+
+Functionalities:
+DecisionTreeClassifier builds decision tree
+Entropy measures impurity
+plot_tree visualizes tree
+
+Procedure:
+
+Load dataset
+Encode categorical values
+Split into X and y
+Train model using entropy
+Generate decision rules
+Plot decision tree
+
+
+EXPERIMENT 6 – NAIVE BAYES
+
+Aim:
+To implement Naive Bayes classifier and compute accuracy.
+
+Libraries Used:
+pandas – dataset handling
+sklearn – machine learning
+
+Functionalities:
+GaussianNB performs classification
+LabelEncoder converts categorical to numeric
+accuracy_score evaluates model
+
+Procedure:
+
+Load dataset
+Encode categorical data
+Split dataset
+Train model
+Predict output
+Calculate accuracy
+
+
+EXPERIMENT 7 – NEURAL NETWORK
+
+Aim:
+To implement Artificial Neural Network using Backpropagation algorithm.
+
+Libraries Used:
+numpy – numerical computations
+
+Functionalities:
+Sigmoid activation function
+Forward propagation
+Backpropagation for weight update
+
+Procedure:
+
+Initialize weights and biases
+Define sigmoid function
+Perform forward propagation
+Calculate error
+Apply backpropagation
+Update weights
+Train model
+Predict output
+
+
+EXPERIMENT 8 – K-MEANS CLUSTERING
+
+Aim:
+To implement K-Means clustering algorithm.
+
+Libraries Used:
+pandas – dataset handling
+numpy – numerical calculations
+matplotlib – visualization
+sklearn – clustering
+
+Functionalities:
+Groups data into clusters
+Calculates centroids
+Minimizes distance
+
+Procedure:
+
+Load dataset
+Choose number of clusters (k)
+Initialize centroids
+Assign points to nearest centroid
+Update centroids
+Repeat until convergence
+Plot clusters
+
+
+EXPERIMENT 9 – IPL PREDICTION
+
+Aim:
+To predict the winning team in IPL matches using machine learning.
+
+Libraries Used:
+pandas – data handling
+numpy – numerical operations
+seaborn – visualization
+matplotlib – plotting
+sklearn – machine learning
+
+Functionalities:
+Data preprocessing
+Visualization
+Classification models
+
+Procedure:
+
+Load dataset
+Clean and preprocess data
+Replace team names
+Visualize data
+Encode categorical data
+Split dataset
+Train models
+Evaluate accuracy
+
+
+EXPERIMENT 10 – LOAN PREDICTION
+
+Aim:
+To predict loan eligibility using machine learning algorithms.
+
+Libraries Used:
+pandas – dataset handling
+numpy – numerical operations
+sklearn – machine learning
+
+Functionalities:
+StandardScaler normalizes data
+LabelEncoder encodes categorical data
+cross_val_score validates model
+joblib saves model
+
+Procedure:
+
+Load dataset
+Handle missing values
+Encode categorical data
+Normalize numerical data
+Split dataset
+Train models
+Evaluate accuracy
+Save model
+Predict loan eligibility
