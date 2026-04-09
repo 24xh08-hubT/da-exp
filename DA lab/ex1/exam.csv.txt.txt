@@ -1,0 +1,7 @@
+Country, Region,Education,Industry,Technology,Income,Developed
+USA,North America,High,Strong,Advanced,High,Yes
+India,Asia,Moderate,Growing,Moderate,Medium,No
+Germany,Europe,High,Strong,Advanced,High,Yes
+Brazil,South America,Moderate,Moderate,Moderate,Medium,No
+Japan,Asia,High,Strong,Advanced,High,Yes
+Nigeria,Africa,Low,Weak,Low,No,No

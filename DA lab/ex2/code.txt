@@ -1,0 +1,21 @@
+import pandas as pd
+
+d = pd.read_csv('exam.csv')
+
+c, t = d.iloc[:, :-1].values, d.iloc[:, -1].values
+
+s = c[0]
+g = [['?' for _ in s] for _ in s]
+
+for i, h in enumerate(c):
+    for x in range(len(s)):
+        if t[i].lower() == "yes" and h[x] != s[x]:
+            s[x] = g[x][x] = '?'
+        elif t[i].lower() == "no":
+            g[x][x] = s[x] if h[x] != s[x] else '?'
+    print(f"Step {i+1}:", "\nS:", s, "\nG:", g)
+
+g = [x for x in g if x != ['?' for _ in s]]
+
+print("\nFinal S:", s)
+print("Final G:", g)

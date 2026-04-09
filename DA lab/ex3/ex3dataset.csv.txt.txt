@@ -1,0 +1,7 @@
+ID,Transaction Items
+1,"Account,Password,OTP"
+2,"Login,Account,Password"
+3,"OTP,Login,Password"
+4,"Account,Login,OTP"
+5,"Password,OTP,Account"
+6,"Login,Password,OTP"

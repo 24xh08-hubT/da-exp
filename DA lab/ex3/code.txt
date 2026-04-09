@@ -1,0 +1,18 @@
+from efficient_apriori import apriori
+import pandas as pd
+
+d = pd.read_csv("ex3dataset.csv")
+print(d, "\n")
+
+t = [[str(x).strip() for x in r if pd.notna(x) and str(x).lower()!="nan"] for r in d.values]
+
+i, r = apriori(t, 0.3, 0.6)
+
+print("Itemset\t\tSupport")
+for a in i:
+    for b,s in i[a].items():
+        print(b, "\t", s)
+
+print("\nAntecedent\tConsequent\tSupport\tConfidence\tLift")
+for x in r:
+    print(x.lhs, "==>", x.rhs, "\t", x.support, "\t", x.confidence, "\t", x.lift)
